@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: white;
+}
+
+/*---------------------------header----------------------------------------*/
+header {
+    background-color: rgb(214, 153, 153);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+header h1 {
+    font-style: italic;
+    color: black;
+    margin: 0;
+}
+
+/*---------------------------NAVIGATION----------------------------------------*/
+nav {
+    background: linear-gradient(90deg, rgba(238, 174, 202, 1) 50%, rgba(148, 187, 233, 1) 100%);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav li a {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+nav li a:hover {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+/* Two-column layout */
+.container {
+    float: left;
+    flex-wrap: nowrap;
+    color: rgb(17, 17, 16);
+}
+
+.container h2 span {
+    color: #0cddc2;
+}
+
+.column {
+    flex: 3;
+    padding: 20px;
+}
+
+#hello {
+    display: flex;
+}
+
+/*---------------------------SIDEBAR----------------------------------------*/
+.sidebar {
+    flex: 1;
+    background-color: rgb(117, 101, 101);
+    padding: 30px;
+    color: rgb(14, 12, 12);
+    padding-right: 150px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 30px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #00aeff;
+    font-weight: bold;
+}
+
+.sidebar h4 {
+    font-size: larger;
+    font-style: italic;
+}
+
+/*---------------------------COLUMN 1----------------------------------------*/
+.column1 img {
+    float: left;
+    margin-right: 10px;
+    max-width: 30%;
+    height: 300px;
+    width: 250px;
+}
+
+/*---------------------------footer----------------------------------------*/
+footer {
+    background: linear-gradient(90deg, rgba(238, 174, 202, 1) 50%, rgba(148, 187, 233, 1) 100%);
+    margin-top: 10px; 
+}
+
+/*---------------------------RESPONSIVE STYLES----------------------------------*/
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation items */
+        align-items: center; /* Center items */
+        padding: 0; /* Remove padding */
+    }
+
+    .container {
+        flex-direction: column; /* Stack columns */
+        padding: 10px; /* Add some padding */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width for sidebar */
+        padding: 20px; /* Adjust padding */
+        margin-bottom: 20px; /* Space below */
+    }
+
+    .column {
+        padding: 10px; /* Less padding for mobile */
+    }
+
+    .column1 img {
+        float: none; /* Reset float */
+        display: block; /* Block display */
+        margin: 0 auto; /* Center image */
+        max-width: 100%; /* Responsive images */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Adjust header font size */
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 601px) and (max-width: 900px) {
+    nav ul {
+        justify-content: space-between; /* Adjust spacing */
+    }
+
+    .container {
+        flex-direction: row; /* Row layout */
+        justify-content: space-between; /* Space between columns */
+    }
+
+    .sidebar {
+        width: 30%; /* Fixed width for sidebar */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .column {
+        width: 65%; /* Main column width */
+        padding: 15px; /* Padding */
+    }
+
+    .column1 img {
+        max-width: 80%; /* Slightly larger images */
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 901px) {
+    .container {
+        display: flex; /* Flex display */
+        flex-direction: row; /* Two-column layout */
+    }
+
+    .sidebar {
+        width: 25%; /* Sidebar width */
+        padding: 30px; /* Original padding */
+    }
+
+    .column {
+        width: 70%; /* Main column width */
+        padding: 20px; /* Standard padding */
+    }
+
+    header h1 {
+        font-size: 2.5em; /* Larger header font size */
+    }
+}
